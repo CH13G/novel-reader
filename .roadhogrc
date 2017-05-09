@@ -1,5 +1,11 @@
 {
   "entry": "src/index.js",
+  "autoprefixer": {
+    "browers": [
+      "ios >= 8",
+      "Android >= 4"
+    ]
+  },
   "env": {
     "development": {
       "extraBabelPlugins": [
@@ -13,7 +19,11 @@
       ]
     }
   },
-  'proxy': {
-
+  "proxy": {
+    "api": {
+      "target": "api.zhuishushenqi.com/book/auto-complete",
+      "changeOrigin": true,
+      "pathRewrite": {"^api": ""}
+    }
   }
 }
